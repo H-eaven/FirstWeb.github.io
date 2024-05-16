@@ -14,29 +14,41 @@
   
 
   
-  <title>实验二 | Ray&#39;s Blog</title>
+  <title>使用git上传代码到gitee仓库以及新建分支 | Ray&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta name="description" content="如实验二要求引用图片">
+  <meta name="description" content="0.新建仓库并下载git这一步自行完成 1.选择文件夹选择并进入某个文件夹后，确保整个文件夹里面没有名称为“.git”的隐藏文件夹，尤其是子目录，如果子文件夹里面有“.git”的话上传之后该子文件夹打不开 2.将所需上传的项目文件放入1.中选择的文件夹后，右键进入git bash 3.依次执行如下命令上传到master分支12345git initgit add .git commit -m &amp;q">
 <meta property="og:type" content="article">
-<meta property="og:title" content="实验二">
-<meta property="og:url" content="http://h-eaven.github.io/2024/03/08/%E4%BD%9C%E4%B8%9A1/index.html">
+<meta property="og:title" content="使用git上传代码到gitee仓库以及新建分支">
+<meta property="og:url" content="http://h-eaven.github.io/2024/05/16/%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF/index.html">
 <meta property="og:site_name" content="Ray&#39;s Blog">
-<meta property="og:description" content="如实验二要求引用图片">
+<meta property="og:description" content="0.新建仓库并下载git这一步自行完成 1.选择文件夹选择并进入某个文件夹后，确保整个文件夹里面没有名称为“.git”的隐藏文件夹，尤其是子目录，如果子文件夹里面有“.git”的话上传之后该子文件夹打不开 2.将所需上传的项目文件放入1.中选择的文件夹后，右键进入git bash 3.依次执行如下命令上传到master分支12345git initgit add .git commit -m &amp;q">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://h-eaven.github.io/picture/71c3581a925c39464fcf98fecbe4fa81256667467.jpg">
-<meta property="og:image" content="https://h-eaven.github.io/picture/1632148221741.jpg">
-<meta property="article:published_time" content="2024-03-08T13:25:00.000Z">
-<meta property="article:modified_time" content="2024-03-08T13:25:39.112Z">
+<meta property="og:image" content="http://h-eaven.github.io/%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_09-51-06.png">
+<meta property="og:image" content="http://h-eaven.github.io/%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_09-54-05.png">
+<meta property="og:image" content="http://h-eaven.github.io/%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-00-28.png">
+<meta property="og:image" content="http://h-eaven.github.io/%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-00-47.png">
+<meta property="og:image" content="http://h-eaven.github.io/%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-01-12.png">
+<meta property="og:image" content="http://h-eaven.github.io/%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-01-22.png">
+<meta property="og:image" content="http://h-eaven.github.io/%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-01-41.png">
+<meta property="og:image" content="http://h-eaven.github.io/%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-19-53.png">
+<meta property="og:image" content="http://h-eaven.github.io/%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-01-57.png">
+<meta property="og:image" content="http://h-eaven.github.io/%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-02-09.png">
+<meta property="og:image" content="http://h-eaven.github.io/%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-02-18.png">
+<meta property="og:image" content="http://h-eaven.github.io/%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-02-44.png">
+<meta property="og:image" content="http://h-eaven.github.io/%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-21-09.png">
+<meta property="og:image" content="http://h-eaven.github.io/%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-21-19.png">
+<meta property="og:image" content="http://h-eaven.github.io/%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-34-47.png">
+<meta property="article:published_time" content="2024-05-16T02:00:00.000Z">
+<meta property="article:modified_time" content="2024-05-16T02:42:03.728Z">
 <meta property="article:author" content="Zeng Rui">
-<meta property="article:tag" content="作业">
-<meta property="article:tag" content="崩坏3">
-<meta property="article:tag" content="Honkai Impact 3rd">
+<meta property="article:tag" content="git">
+<meta property="article:tag" content="gitee">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://h-eaven.github.io/picture/71c3581a925c39464fcf98fecbe4fa81256667467.jpg">
+<meta name="twitter:image" content="http://h-eaven.github.io/%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_09-51-06.png">
   
     <link rel="alternate" href="/atom.xml" title="Ray's Blog" type="application/atom+xml">
   
@@ -256,7 +268,7 @@
        
 
 
-<article id="post-作业1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<article id="post-使用git上传代码到gitee仓库以及新建分支" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   
     
    
@@ -269,7 +281,7 @@
   
     
       <h1 class="p-name article-title" itemprop="headline name">
-        实验二
+        使用git上传代码到gitee仓库以及新建分支
       </h1>
     
   
@@ -277,27 +289,53 @@
 
         <div class='meta-info-bar'>
           <div class="meta-info">
-  <time class="dt-published" datetime="2024-03-08T13:25:00.000Z" itemprop="datePublished">2024-03-08</time>
+  <time class="dt-published" datetime="2024-05-16T02:00:00.000Z" itemprop="datePublished">2024-05-16</time>
 </div>
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-  <a class="meta-cate-link" href="/categories/%E4%BD%9C%E4%B8%9A/">作业</a>
+  <a class="meta-cate-link" href="/categories/Web%E9%A1%B9%E7%9B%AE/">Web项目</a>
    
 </div>
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            10 词 
+            716 词 
           </div>
         </div>
         
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Honkai-Impact-3rd/" rel="tag">Honkai Impact 3rd</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BD%9C%E4%B8%9A/" rel="tag">作业</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B4%A9%E5%9D%8F3/" rel="tag">崩坏3</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gitee/" rel="tag">gitee</a></li></ul>
 
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
-          <h1 id="如实验二要求引用图片"><a href="#如实验二要求引用图片" class="headerlink" title="如实验二要求引用图片"></a>如实验二要求引用图片</h1><p><img src="/../picture/71c3581a925c39464fcf98fecbe4fa81256667467.jpg" alt="图片一"><br><img src="https://h-eaven.github.io/picture/1632148221741.jpg" alt="图片二"></p>
+          <h3 id="0-新建仓库并下载git"><a href="#0-新建仓库并下载git" class="headerlink" title="0.新建仓库并下载git"></a>0.新建仓库并下载git</h3><p>这一步自行完成</p>
+<h3 id="1-选择文件夹"><a href="#1-选择文件夹" class="headerlink" title="1.选择文件夹"></a>1.选择文件夹</h3><p>选择并进入某个文件夹后，确保整个文件夹里面没有名称为“.git”的隐藏文件夹，尤其是子目录，如果子文件夹里面有“.git”的话上传之后该子文件夹打不开<br><img src="/../%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_09-51-06.png"></p>
+<h3 id="2-将所需上传的项目文件放入1-中选择的文件夹后，右键进入git-bash"><a href="#2-将所需上传的项目文件放入1-中选择的文件夹后，右键进入git-bash" class="headerlink" title="2.将所需上传的项目文件放入1.中选择的文件夹后，右键进入git bash"></a>2.将所需上传的项目文件放入1.中选择的文件夹后，右键进入git bash</h3><p><img src="/../%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_09-54-05.png"></p>
+<h3 id="3-依次执行如下命令上传到master分支"><a href="#3-依次执行如下命令上传到master分支" class="headerlink" title="3.依次执行如下命令上传到master分支"></a>3.依次执行如下命令上传到master分支</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;注释信息写在此处&quot;</span><br><span class="line">git remote add 自己取的名称 你仓库的地址</span><br><span class="line">git push -u 自己取的名称 &quot;master&quot;</span><br></pre></td></tr></table></figure>
+<p>-m表示提交你对此次提交注释的信息，-u建立起本地分支和远程分支的关联，同时将远程分支设置为本地分支的上游分支。这样做的好处是，在后续的 git pull 或 git push 命令中，如果没有指定远程分支和本地分支，Git 会自动使用上游分支进行操作</p>
+<p><img src="/../%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-00-28.png"><br><img src="/../%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-00-47.png"><br><img src="/../%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-01-12.png"><br><img src="/../%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-01-22.png"><br><img src="/../%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-01-41.png"></p>
+<p>可以看见仓库里已经有了<br><img src="/../%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-19-53.png"></p>
+<h3 id="4-添加分支的一些相关命令"><a href="#4-添加分支的一些相关命令" class="headerlink" title="4.添加分支的一些相关命令"></a>4.添加分支的一些相关命令</h3><ol>
+<li><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b newbranch</span><br></pre></td></tr></table></figure>
+<p>-b表示创建新的分支，newbranch是自己取的分支名<br><img src="/../%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-01-57.png"></p>
+</li>
+<li><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -a</span><br></pre></td></tr></table></figure>
+<p>可以查看已有分支<br><img src="/../%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-02-09.png"></p>
+</li>
+<li><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch --set-upstream-to=自己取的名称/master</span><br></pre></td></tr></table></figure>
+<p>拉取远程分支<br><img src="/../%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-02-18.png"></p>
+</li>
+<li><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull mytestname master:newbranch</span><br></pre></td></tr></table></figure>
+<p>这个命令将当前分支（newbranch）设置为跟踪远程仓库 mytestname 的 master 分支。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch --unset-upstream master</span><br></pre></td></tr></table></figure>
+<p>这个命令取消了 master 分支的上游跟踪关系<br><img src="/../%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-02-44.png"></p>
+</li>
+<li><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;second try&quot;</span><br></pre></td></tr></table></figure>
+<p><img src="/../%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-21-09.png"><br><img src="/../%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-21-19.png"></p>
+</li>
+</ol>
+<p>可以看到仓库中新建的分支<br><img src="/../%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0gitee%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%E7%9A%84%E5%9B%BE%E7%89%87/Snipaste_2024-05-16_10-34-47.png"></p>
 
         
       </div>
@@ -310,27 +348,22 @@
   
     
 <nav id="article-nav">
-  <a class="article-nav-btn left "
-    
-      href="/2024/03/21/%E5%88%9B%E5%BB%BAWeb%E9%A1%B9%E7%9B%AE%E5%B9%B6%E7%BC%96%E5%86%99%E7%AC%AC%E4%B8%80%E4%B8%AAServlet/"
-      title="创建Web项目并编写第一个Servlet"
+  <a class="article-nav-btn left  disabled "
      >
     <i class="fa-solid fa-angle-left"></i>
     <p class="title-text">
-      
-        创建Web项目并编写第一个Servlet
         
     </p>
   </a>
   <a class="article-nav-btn right "
     
-      href="/2024/03/08/%E5%88%9D%E6%AC%A1%E8%A7%81%E9%9D%A2/"
-      title="初次见面"
+      href="/2024/03/21/%E5%88%9B%E5%BB%BAWeb%E9%A1%B9%E7%9B%AE%E5%B9%B6%E7%BC%96%E5%86%99%E7%AC%AC%E4%B8%80%E4%B8%AAServlet/"
+      title="创建Web项目并编写第一个Servlet"
      >
 
     <p class="title-text">
       
-        初次见面
+        创建Web项目并编写第一个Servlet
         
     </p>
     <i class="fa-solid fa-angle-right"></i>

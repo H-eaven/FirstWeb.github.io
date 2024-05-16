@@ -1350,6 +1350,7 @@ a.article-title:active {
   height: auto;
   display: block;
   margin: auto;
+  margin-left: 0;
 }
 .article-entry iframe {
   border-radius: 8px;
